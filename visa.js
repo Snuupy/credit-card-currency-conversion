@@ -20,7 +20,8 @@ let c = new Crawler({
         console.log($("title").text(), val);
       }
       let params = res.options.data;
-      console.log(params.date.format("YYYY-MM-DD"), "Visa", rate);
+
+      console.log(`${params.date.format("YYYY-MM-DD")} Visa ${params.fromCurrency}->${params.toCurrency}: ${rate}`);      
       storeData(
         "visa",
         params.fromCurrency,

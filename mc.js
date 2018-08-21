@@ -12,7 +12,7 @@ let c = new Crawler({
       // let $ = res.$;
       let params = res.options.data;
       let rate = JSON.parse(res.body).data.conversionRate;
-      console.log(params.date.format("YYYY-MM-DD"), "MC", rate);
+      console.log(`${params.date.format("YYYY-MM-DD")} MC ${params.fromCurrency}->${params.toCurrency}: ${rate}`);
       storeData(
         "mc",
         params.fromCurrency,
