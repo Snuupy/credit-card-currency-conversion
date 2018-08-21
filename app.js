@@ -19,6 +19,10 @@ for (var m = moment(a); m.isBefore(b); m.add(1, 'days')) {
   // visa.addCrawl(m, "USD", "HKD");
   // mc.addCrawl(m, "USD", "HKD");
 
+  // USD -> GBP
+  visa.addCrawl(m, "USD", "GBP");
+  mc.addCrawl(m, "USD", "GBP");
+
   // CAD -> USD
   // visa.addCrawl(m, 'CAD', 'USD');
   // mc.addCrawl(m, 'CAD', 'USD');
@@ -30,4 +34,8 @@ for (var m = moment(a); m.isBefore(b); m.add(1, 'days')) {
   // CAD -> HKD
   // visa.addCrawl(m, "CAD", "HKD");
   // mc.addCrawl(m, "CAD", "HKD");
+
+  // CAD -> GBP
+  visa.addCrawl(m, "CAD", "GBP");
+  mc.addCrawl(m, "CAD", "GBP");
 }

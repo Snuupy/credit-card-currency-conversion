@@ -12,8 +12,14 @@ let c = new Crawler({
       // let $ = res.$;
       let params = res.options.data;
       let rate = JSON.parse(res.body).data.conversionRate;
-      console.log(params.date.format('YYYY-MM-DD'), 'MC', rate);
-      storeData("mc", params.fromCurrency, params.toCurrency, moment(params.date).format("YYYY-MM-DD"), rate);
+      console.log(params.date.format("YYYY-MM-DD"), "MC", rate);
+      storeData(
+        "mc",
+        params.fromCurrency,
+        params.toCurrency,
+        moment(params.date).format("YYYY-MM-DD"),
+        rate
+      );
     }
     done();
   }
@@ -22,7 +28,7 @@ let c = new Crawler({
 function storeData(cardIssuer, fromCurrency, toCurrency, date, rate) {
   let data = `${date}\t${rate}\n`;
   fs.appendFile(
-    `${cardIssuer}-${fromCurrency}-${toCurrency}.csv`,
+    `./data/${cardIssuer}-${fromCurrency}-${toCurrency}.csv`,
     data,
     err => {
       if (err) {
