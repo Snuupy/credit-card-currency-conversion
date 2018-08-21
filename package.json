@@ -1,0 +1,17 @@
+{
+  "name": "credit-card-exchange-rates",
+  "version": "0.0.1",
+  "description": "scrapes credit card issuers for their conversion rates on various currencies",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Snuupy",
+  "license": "ISC",
+  "dependencies": {
+    "crawler": "^1.2.0",
+    "json2csv": "^4.2.1",
+    "moment": "^2.22.2"
+  }
+}
